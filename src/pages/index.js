@@ -7,3 +7,4 @@ export { default as Register } from "./Register";
 export { default as Unauthorized } from "./Unauthorized";
 export { default as Editor } from "./Editor";
 export { default as Missing } from "./Missing";
+export { default as RequireAuth } from "./RequireAuth";

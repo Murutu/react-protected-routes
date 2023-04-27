@@ -3,7 +3,7 @@ import './App.css'
 
 import { Layout } from "./layout";
 
-import { Admin, Editor, Home, LinkPage, Login, Lounge, Missing, Register, Unauthorized } from "./pages";
+import { Admin, Editor, Home, LinkPage, Login, Lounge, Missing, Register, RequireAuth, Unauthorized } from "./pages";
 
 function App() {
   
@@ -17,10 +17,12 @@ function App() {
         <Route path="unauthorized" element={<Unauthorized />}/>
 
         {/* protected routes */}
+        <Route element={<RequireAuth />}>
         <Route path="/" element={<Home/>}/>
         <Route path="editor" element={<Editor/>}/>
         <Route path="admin" element={<Admin />}/>
         <Route path="lounge" element={<Lounge />}/>
+        </Route>
 
         {/* catch all */}
         <Route path="*" element={<Missing />}/>
