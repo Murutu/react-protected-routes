@@ -24,7 +24,7 @@ const Login = () => {
         </form>
         <p>Need an Account?<br />
         <span className="line">
-            <Link to="/register"></Link>
+            <Link to="/register">Register</Link>
         </span>
         </p>
     </section>
